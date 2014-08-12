@@ -8,6 +8,6 @@ Gem::Specification.new do |s|
   s.email           = 'bruno@brunoabrantes.com'
   s.files           = ["lib/aztec.rb", "bin/aztec"]
   s.executables     << 'aztec'
-  s.homepage        = 'http://rubygems.org/gems/aztec'
+  s.homepage        = 'http://github.com/inf0rmer/aztec-core'
   s.license         = 'MIT'
 end
