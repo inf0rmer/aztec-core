@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name            = 'aztec'
-  s.version         = '0.0.0'
+  s.version         = '0.0.1'
   s.date            = '2014-08-12'
   s.summary         = "The Aztec parser for Cocoapods"
   s.description     = "Lets you know which pods are outdated"
