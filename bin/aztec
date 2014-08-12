@@ -1,0 +1,33 @@
+#!/usr/bin/env ruby
+require 'bundler/setup'
+Bundler.require
+require 'optparse'
+require './lib/parser'
+
+folders = []
+
+# create option parser
+opts = OptionParser.new
+opts.banner = "Usage: parser.rb [options]"
+
+opts.on('-f', '--folder FOLDER', 'Folder to scan') do |v|
+   folders << v
+end
+
+# parse the options
+begin
+  opts.parse!(ARGV)
+rescue OptionParser::InvalidOption => e
+  puts e
+  puts opts
+  exit(1)
+end
+
+# Create the Aztec parser
+parser = Aztec::Parser.new
+
+puts "Parsing folders #{folders}"
+
+folders.each do |f|
+  puts parser.parse f
+end
